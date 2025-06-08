@@ -1,4 +1,4 @@
-import { Search, ChevronDown } from "lucide-react";
+import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Header() {
@@ -6,10 +6,9 @@ export default function Header() {
     <header className="w-full border-b border-border/50 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-lg">O</span>
-          </div>
-          <span className="font-semibold text-lg">OpenRouter</span>
+          <a href="/" className="flex items-center gap-2">
+            <span className="font-semibold text-lg">OpenRouter</span>
+          </a>
         </div>
         
         <div className="hidden md:flex items-center gap-6">

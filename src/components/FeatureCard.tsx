@@ -22,9 +22,9 @@ export default function FeatureCard({ title, description, linkText, href = "#", 
             </h3>
             <p className="text-sm text-muted-foreground">{description}</p>
           </div>
-          <span className="text-primary group-hover/card:underline flex items-center gap-1">
+          <span className="text-primary group-hover/card:underline flex items-center">
             {linkText}
-            <ExternalLink className="w-4 h-4" />
+            <ExternalLink className="ml-1 inline-block w-4" />
           </span>
         </div>
       </div>

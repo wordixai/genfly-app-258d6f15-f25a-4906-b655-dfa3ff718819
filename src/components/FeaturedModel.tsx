@@ -9,7 +9,8 @@ interface FeaturedModelProps {
   growth: string;
   isNew?: boolean;
   highlighted?: boolean;
-  providerColor?: string;
+  providerIcon?: string;
+  darkInvert?: boolean;
 }
 
 export default function FeaturedModel({
@@ -20,7 +21,8 @@ export default function FeaturedModel({
   growth,
   isNew = false,
   highlighted = false,
-  providerColor = "#666"
+  providerIcon = "",
+  darkInvert = false
 }: FeaturedModelProps) {
   return (
     <div className={`group/card text-card-foreground transition-all duration-200 hover:text-slate-12 hover:shadow-lg group bg-background rounded-lg border p-4 shadow-sm hover:border-primary ${highlighted ? 'md:border-primary' : 'border-slate-6'}`}>
@@ -31,12 +33,16 @@ export default function FeaturedModel({
               <div className="flex items-center gap-1.5">
                 <h3 className="text-foreground font-medium">{name}</h3>
                 {isNew && (
-                  <Badge variant="secondary" className="text-[10px]">New</Badge>
+                  <Badge variant="secondary" className="bg-muted text-muted-foreground rounded-sm px-1.5 py-0.5 text-[10px]">New</Badge>
                 )}
               </div>
               <div className="items-center justify-center size-6 flex-shrink-0 rounded-full border border-border/50 shadow bg-muted p-0.5 hidden md:flex transition-transform group-hover:scale-110 group-hover:rotate-12">
-                <div className="overflow-hidden rounded-full">
-                  <div className="h-full w-full flex-shrink-0 rounded-full" style={{ backgroundColor: providerColor }} />
+                <div className={`overflow-hidden rounded-full ${darkInvert ? 'dark:invert' : ''}`}>
+                  <picture className="h-full w-full flex-shrink-0">
+                    <div className="h-full w-full bg-gray-200 rounded-full flex items-center justify-center text-xs">
+                      {provider.charAt(0).toUpperCase()}
+                    </div>
+                  </picture>
                 </div>
               </div>
             </div>

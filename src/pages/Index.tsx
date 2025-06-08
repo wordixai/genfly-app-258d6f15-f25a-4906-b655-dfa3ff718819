@@ -26,11 +26,11 @@ const Index = () => {
               </h1>
               <p className="text-slate-11 text-md mb-4 md:mb-8 md:pt-2 md:text-xl">
                 Better{" "}
-                <a href="/models?order=pricing-low-to-high" className="text-primary hover:underline">
+                <a href="/models?order=pricing-low-to-high" className="hover:underline">
                   prices
                 </a>
                 , better{" "}
-                <a href="/docs/features/uptime-optimization" className="text-primary hover:underline">
+                <a href="/docs/features/uptime-optimization" className="hover:underline">
                   uptime
                 </a>
                 , no subscription.

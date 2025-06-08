@@ -1,4 +1,4 @@
-import { BarChart3, ChevronUp, ChevronDown } from "lucide-react";
+import { BarChart3, ChevronRight, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -46,7 +46,7 @@ const AppItem = ({ app, index }: { app: typeof apps[0]; index: number }) => (
         href={app.url}
       >
         {app.name}
-        <ChevronUp className="inline w-4 transition-transform group-hover:translate-x-0.5" />
+        <ChevronRight className="inline w-4 transition-transform group-hover:translate-x-0.5" />
       </a>
       <div className="truncate text-xs text-slate-9">
         {app.isNew ? (
@@ -86,7 +86,7 @@ export default function TopAppsSection() {
         <div className="group relative">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline" className="rounded-full pl-4 pr-2 gap-2">
+              <Button variant="outline" className="rounded-full pl-4 pr-2 gap-2 text-muted-foreground hover:bg-accent hover:text-accent-foreground">
                 Today
                 <ChevronDown className="size-4" />
               </Button>

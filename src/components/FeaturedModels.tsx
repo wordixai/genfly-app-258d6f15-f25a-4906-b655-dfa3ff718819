@@ -33,13 +33,13 @@ export default function FeaturedModels() {
           latency="1.6s"
           growth="-18.11%"
           highlighted
-          providerColor="#C5915B"
+          providerIcon="/images/icons/Anthropic.svg"
         />
         <div className="flex items-center justify-between px-2 pt-4">
           <h2 className="text-slate-11 text-sm font-medium">Featured Models</h2>
           <a className="text-primary text-xs hover:underline flex items-center gap-1" href="#">
             View Trending
-            <ExternalLink className="size-3" />
+            <ExternalLink className="inline-block ml-px size-3" />
           </a>
         </div>
       </div>
@@ -48,9 +48,9 @@ export default function FeaturedModels() {
       <div className="hidden space-y-3 md:block">
         <div className="flex items-center justify-between">
           <h2 className="text-slate-11 text-sm font-medium">Featured Models</h2>
-          <Button variant="link" className="h-6 px-1.5 text-xs gap-1">
+          <Button variant="link" className="h-6 px-1.5 text-xs gap-0 text-primary hover:underline">
             View Trending
-            <ExternalLink className="size-3" />
+            <ExternalLink className="inline-block ml-px size-3" />
           </Button>
         </div>
         
@@ -62,7 +62,7 @@ export default function FeaturedModels() {
             latency="2.2s"
             growth="--"
             isNew
-            providerColor="#4285F4"
+            providerIcon="/images/icons/GoogleGemini.svg"
           />
           <FeaturedModel
             name="GPT-4.1"
@@ -70,7 +70,8 @@ export default function FeaturedModels() {
             tokens="47.0B"
             latency="771ms"
             growth="-1.71%"
-            providerColor="#000000"
+            providerIcon="/images/icons/OpenAI.svg"
+            darkInvert
           />
           <FeaturedModel
             name="Claude Sonnet 4"
@@ -79,7 +80,7 @@ export default function FeaturedModels() {
             latency="1.6s"
             growth="-18.11%"
             highlighted
-            providerColor="#C5915B"
+            providerIcon="/images/icons/Anthropic.svg"
           />
         </div>
       </div>
